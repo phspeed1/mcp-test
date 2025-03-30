@@ -44,6 +44,15 @@ function App() {
     );
   };
 
+  // 할일 편집
+  const editTodo = (id, newText) => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, text: newText } : todo
+      )
+    );
+  };
+
   return (
     <div className="App">
       <div className="todo-container">
@@ -52,7 +61,8 @@ function App() {
         <TodoList 
           todos={todos} 
           onDelete={deleteTodo} 
-          onToggleComplete={toggleComplete} 
+          onToggleComplete={toggleComplete}
+          onEdit={editTodo}
         />
       </div>
     </div>
