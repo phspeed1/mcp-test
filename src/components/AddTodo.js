@@ -17,7 +17,7 @@ const AddTodo = ({ onAdd }) => {
                 type="text" 
                 value={text} 
                 onChange={(e) => setText(e.target.value)} 
-                placeholder="할일을 입력하세요" 
+                placeholder="할일을 입력하세요!!" 
                 className="todo-input"
             />
             <button type="submit" className="add-btn">추가</button>
